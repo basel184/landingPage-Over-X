@@ -1,0 +1,60 @@
+@import '../fonts/ar/stylesheet.css';
+@import '../fonts/en/stylesheet.css';
+@import './bootstrap.min.css';
+@import './all.min.css';
+@import './global.css';
+
+.pagination-container {
+    span {
+      background-color: #fff;
+      width: 27px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      &:hover {
+        color: #262262;
+      }
+      &.active {
+        background-color: #262262;
+        color: #fff;
+      }
+      &.arrow {
+        color: #3636368a;
+      }
+      &.arrow-single {
+        background-color: #eee;
+        color: #3636368c;
+      }
+    }
+  }
+  
+  #app.ltr {
+    .rotate-180 {
+      transform: rotate(180deg);
+    }
+  }
+
+  .vendor_logo{
+    height: 150px;
+    width: 190px;
+    height: 150px;
+    border: 2px solid #f8b127;
+    border-radius: 15px;
+    padding: 3px;
+    transition: all 0.4s;
+  
+    &:hover {
+      padding: 0px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .vendor_logo{
+      width: 125px;
+      height: 120px;
+    }
+  }
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');

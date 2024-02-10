@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'SST Arabic';
+    src: url('SSTArabic-Medium.eot');
+    src: url('SSTArabic-Medium.eot?#iefix') format('embedded-opentype'),
+        url('SSTArabic-Medium.woff2') format('woff2'),
+        url('SSTArabic-Medium.woff') format('woff'),
+        url('SSTArabic-Medium.ttf') format('truetype'),
+        url('SSTArabic-Medium.svg#SSTArabic-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
