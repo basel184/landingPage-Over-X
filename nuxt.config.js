@@ -2,7 +2,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'AC-Marketer',
+    title: 'Over-X',
     htmlAttrs: {
       lang: 'en'
     },
@@ -53,6 +53,8 @@ export default {
       { code: 'en', iso: 'en-US', file: require("./lang/en.json"), dir: 'ltr' },
       { code: 'ar', iso: 'ar-EG', file: require("./lang/ar.json"), dir: 'rtl' },
     ],
+    strategy: "prefix_except_default",
+    detectBrowserLanguage: false,
     defaultLocale: "ar",
     vueI18n: {
       fallbackLocale: "ar",
@@ -75,7 +77,7 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: process.env.BASE_URL || 'http://127.0.0.1:8000/api/'
+    baseURL: process.env.BASE_URL || 'https://admin.overtime.marketing/api/'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

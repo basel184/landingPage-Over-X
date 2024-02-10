@@ -12,7 +12,7 @@
           <div>
             <h6 class="my-0">{{ $t('check_out.course') }}</h6>
           </div>
-          <span class="text-muted">15</span>
+          <span class="text-muted">1500</span>
         </li>
         <li v-if="discountApplied && e == false" class="list-group-item d-flex justify-content-between bg-light">
           <div class="text-success">
@@ -36,7 +36,7 @@
           </div>
         </div>
         <p v-if="e" class="error-message">{{ errMsg }}</p>
-        <p v-if="discountApplied && e == false">{{ $t('check_out.20%_discount') }}</p>
+        <p style="color: black;" v-if="discountApplied && e == false">{{ $t('check_out.20%_discount') }}</p>
       </form>
     </div>
     <div class="col-md-8 order-md-1">
@@ -69,6 +69,10 @@
           <input type="email"
           v-model="formData.email"
           class="form-control" id="email" placeholder="you@example.com" required>
+          <div style="color: red;font-weight: 600;"
+          v-if="invalid_feedback == false && formData.email == ''" class="invalid-feedback">
+            {{ $t('check_out.enter_email_success') }}
+          </div>
           <div v-if="invalid_feedback && formData.email == ''" class="invalid-feedback">
             {{ $t('check_out.enter_email') }}
           </div>
@@ -118,7 +122,7 @@ export default {
         email: '',
         phone: '',
       },
-      coursePrice: 15, // تعديل سعر الكورس حسب الحاجة
+      coursePrice: 1500, // تعديل سعر الكورس حسب الحاجة
       promoCode: '',
       discountApplied: false
     }
@@ -145,7 +149,7 @@ export default {
         .get(`/check-seller?code=${this.promoCode}`)
         .then((res) => {
         this.e = false
-        this.coursePrice = 15 - 3; // خصم 20%
+        this.coursePrice = 1500 - 300; // خصم 20%
         this.discountApplied = true;
         })
         .catch((err) => {
@@ -176,6 +180,14 @@ export default {
         type: 'courses',
         type_id: 15,
       })
+      this.$axios.$post('/store-course', {
+        merchantRefNumber: merchantRefNum,
+        Price: this.coursePrice,
+        email: this.formData.email,
+        phone: this.formData.phone,
+        user_id: this.promoCode,
+        is_paid: 0,
+      })
       const chargeRequest = {
         merchantCode: 'siYxylRjSPwp6hU2uLkDRg==',
         merchantRefNum,      
@@ -190,7 +202,8 @@ export default {
             quantity: 1,
           },
         ],
-        returnUrl: `${process.env.TEMP_PAGE}?merchantRefNumber=${merchantRefNum}&promoCode=${this.promoCode}&name=${this.formData.email}&phone=${this.formData.phone}&email=${this.formData.name}&price=${this.coursePrice}`,
+        //returnUrl: `${process.env.TEMP_PAGE}?merchantRefNumber_check=${merchantRefNum}&promoCode=${this.promoCode}&email=${this.formData.email}&phone=${this.formData.phone}&name=${this.formData.name}&price=${this.coursePrice}`,
+        returnUrl: `${process.env.TEMP_PAGE}?merchantRefNumber_check=${merchantRefNum}&price=${this.coursePrice}`,
         authCaptureModePayment: false,
         secKey: '62343ac8-cfd8-451f-9bc8-4a72dc287570',
       }

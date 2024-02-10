@@ -91,10 +91,11 @@
     "enter_name":"Please enter the name",
     "enter_phone":"Please enter phone number",
     "enter_email":"Please enter your email",
+    "enter_email_success":"Please make sure to enter the correct email to send the course link",
     "email":"email",
     "phone_number":"phone number",
     "name":"name",
-    "course":"course",
+    "course":"Affiliate Marketing Skills Course",
     "Your_cart":"cart",
     "Enter_your_data":"Enter your data",
     "Order_now": "Order now"
@@ -115,7 +116,10 @@
     "reload": "Reload",
     "paid": "Paid successfully",
     "sent_your_email":"The course link has been sent to your email",
-    "un_paid": "An Error occurred during the payment process"
+    "un_paid": "An error occurred during the payment process",
+    "price": "Make payment",
+    "referenceNumber": "In the Fawry machine with this reference number",
+    "un_paid_1": "If you paid, reload the page"
   },
   "contact-us": {
     "title": "Means of communication"

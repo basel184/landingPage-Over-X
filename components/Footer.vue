@@ -71,17 +71,21 @@
             <div class="footer-icons">
             
               <a target="_blank"
-              href="https://www.facebook.com/profile.php?id=61550477788009&_rdc=1&_rdr">
+              href="https://www.facebook.com/profile.php?id=61556160234485">
               <img src="@/assets/img/social/facebook.png" width="30" alt=""></a>
+
               <a target="_blank" 
-              href="https://twitter.com/OvertimeBroker">
-              <img src="@/assets/img/social/twitter.png" width="30" alt=""></a>
-              <a href="https://www.linkedin.com/company/over-time-marketing">
-              <img src="@/assets/img/social/linkedin.png" width="30" alt=""></a>
-              <a href="https://www.instagram.com/overtime.brokerage/">
+              href="https://www.linkedin.com/in/overtime-academy-213a24289/">
+              <img src="@/assets/img/social/702300.png" width="30" alt=""></a>
+
+              <a href="https://www.instagram.com/overtime.academy.eg/">
               <img src="@/assets/img/social/instagram.png" width="30" alt=""></a>
+
+              <a href="https://www.youtube.com/@overtime.academy">
+              <img src="@/assets/img/social/Youtube_logo.png" width="30" alt=""></a>
+
               <a target="_blank"
-              href="https://www.tiktok.com/@overtimehub">
+              href="https://www.tiktok.com/@overtime.academy.eg">
               <img src="@/assets/img/social/tiktok.png" width="30" alt=""></a>
 
             </div>
@@ -89,8 +93,15 @@
           </div>
           <div>
             <p class="footer-company-name"
-            style="text-align: center;background: #33383b;padding-top: 10px;color: #fff;
-            padding-bottom: 10px;margin-top: 30px;">Copyrights Overtime Marketing L.L.C ©</p>
+              style="text-align: center;background: #33383b;padding-top: 10px;color: #fff;
+              padding-bottom: 10px;margin-top: 30px;display: flex;flex-direction: row-reverse;flex-wrap: nowrap;justify-content: center;">
+              <a>
+                2022 ©&nbsp;
+              </a>
+              <a href="https://www.overtime.com.eg/" target="_blank">
+                &nbsp;Copyrights Overtime marketing L.L.C&nbsp;
+              </a>
+            </p>
           </div>
         </footer>
     </div>

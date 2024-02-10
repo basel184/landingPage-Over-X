@@ -67,7 +67,7 @@
             <br>
             <div>
               <video class="video"  controls>
-                <source src="/videos/1.mp4" type="video/mp4" />
+                <source src="/videos/2.mp4" type="video/mp4" />
                 <!-- يمكنك إضافة مصادر إضافية هنا لدعم متصفحات متعددة -->
               </video>
             </div>
@@ -257,7 +257,7 @@
        <div class="row EditRow" style="padding-top: 50px;">
         <div class="col-12 col-md-6" style="text-align: center;">
            <img
-             src="@/assets/img/sec7-2.png"
+             src="@/assets/img/sec7-1.png"
              alt
            />
            <div>
@@ -272,7 +272,7 @@
          </div>
         <div class="col-12 col-md-6" style="text-align: center;">
             <img
-              src="@/assets/img/sec7-1.png"
+              src="@/assets/img/sec7-2.png"
               alt
             />
             <div>
@@ -405,8 +405,8 @@
             src="@/assets/img/sec10.png"
             alt
             />
-            <a href="https://www.overtime.marketing/" target="_blank" style="color: #CCF4E5;font-size:27px;">
-              www.overtime.com.eg
+            <a href="https://www.overtime.eg/" target="_blank" style="color: #CCF4E5;font-size:27px;">
+              www.overtime.eg
             </a>
          </div>
        </div>
