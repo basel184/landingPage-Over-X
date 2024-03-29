@@ -1,6 +1,6 @@
 <template>
     <div>
-     <div class="section" id="section2" style="padding-bottom:0;">
+     <div class="section" id="section1" style="padding-bottom:0;">
        <div class="container">
        <div class="row EditRow">
         <div class="col-12 col-md-7">
@@ -12,71 +12,99 @@
              style="color: #56C100;font-size: 30px;font-weight: 600;">
              {{ $t('landingPage.sec1(2)') }}
             </p>
-            <br>
-             <nuxt-link
-              style="background: #142930;padding: 20px 50px 20px 50px;border-radius: 20px;color: #C6DCE3;"
-              :to="localePath('/check_out')">
-              {{ $t('Subscribe') }}
-             </nuxt-link>
          </div>
         <div class="col-12 col-md-5">
           <img
             class="img_sec1"
-            src="@/assets/img/sec1.png"
+            src="@/assets/img/Home.svg"
             alt />
          </div>
        </div>
        </div>
      </div>
-     <div class="section" id="section2" 
-     style="background-color: #142930;">
+     <div class="section" id="section2">
        <div class="container">
        <div class="row section2"
         style="padding: 85px 0 85px 0;" >
-          <div class="col-12 col-md-6">
-            <img
-            style="width: 90%;"
-            src="@/assets/img/sec2.png"
-            alt
-            />
-         </div>
          <div class="col-12 col-md-6 pt-3">
             <p style="color:#C6DCE3;font-size: 30px;">
               {{ $t('landingPage.sec2') }}
             </p>
          </div>
-       </div>
-       </div>
-     </div>
-     <div class="section" id="section2" 
-      style="background: #C6DCE3;">
-       <div class="container">
-       <div class="row" >
-         <div class="col-12 col-md-12" style="text-align: center;">
-            <u style="color: #142930; font-size: 30px;font-weight: 500;">
-              {{ $t('landingPage.sec3(1)') }}
-            </u>
-            <br>
-            <u style="color: #142930;font-size: 26px;font-weight: 500;">
-              {{ $t('landingPage.sec3(2)') }}
-            </u>
-            <br>
-            <u style="color: #142930; font-size: 26px;font-weight: 500;">
-              {{ $t('landingPage.sec3(3)') }}
-            </u>
-            <br>
-            <div>
-              <video class="video"  controls>
-                <source src="/videos/2.mp4" type="video/mp4" />
-                <!-- يمكنك إضافة مصادر إضافية هنا لدعم متصفحات متعددة -->
-              </video>
-            </div>
+         <div class="col-12 col-md-6">
+            <img
+            style="width: 90%;"
+            src="@/assets/img/Home2.png"
+            alt
+            />
          </div>
        </div>
        </div>
      </div>
-     <div class="section" id="section2" 
-      style="background-color: #142930;">
+     <div class="section" id="section1">
+       <div class="container">
+       <div class="row" >
+         <div class="col-6 col-md-3" style="text-align: center;">
+          <img
+            
+            src="@/assets/img/Our Work.svg"
+            alt />
+         </div>
+         <div class="col-6 col-md-3" style="text-align: center;">
+          <img
+            
+            src="@/assets/img/Our Work (1).svg"
+            alt />
+         </div>
+         <div class="col-6 col-md-3" style="text-align: center;">
+          <img
+            
+            src="@/assets/img/Our Work (2).svg"
+            alt />
+         </div>
+         <div class="col-6 col-md-3" style="text-align: center;">
+          <img
+            
+            src="@/assets/img/Our Work (3).svg"
+            alt />
+         </div>
+         <div class="col-12" style="padding-bottom: 50px;padding-top: 100px;">
+           <div style="padding-bottom: 50px;"
+             class="intro-calc position-relative d-flex justify-content-center align-items-center"
+           >
+             <div class="bg-right d-none d-lg-block">
+               <img src="@/assets/img/leftbg.png" alt />
+             </div>
+           
+             <h4 class="font-weight-bold tx-dark-blue w-md-60 text-center m-auto">
+               <span
+                 v-text="
+                   $t('OvertimeBusinessClients.title')
+                 "
+               />
+               <span class="tx-orange">{{ $t('overtime') }}</span>
+             </h4>
+             <div class="bg-left d-none d-lg-block">
+               <img style="transform: rotate(180deg);"  src="@/assets/img/leftbg.png" alt />
+             </div>
+           </div>
+           <div class="slider-carousel">
+           <div class="swiper-container">
+               <swiper class="swiper-wrapper" :options="swiperOptions">
+                 <swiper-slide class="swiper-slide" v-for="(item, index) in vendors" :key="index">
+                   <img :src="item.logo" :alt="item.caption" />
+                 </swiper-slide>
+               </swiper>
+               <!--<div class="swiper-pagination"></div>-->
+               <div class="swiper-button-prev"></div>
+               <div class="swiper-button-next"></div>
+             </div>
+           </div>
+         </div>
+       </div>
+       </div>
+     </div>
+     <div class="section" id="section2">
        <div class="container">
           <div style="text-align: center;">
             <u class="choice_difficult1" style="color: #C6DCE3; font-size: 30px;">
@@ -131,52 +159,25 @@
        </div>
        </div>
      </div>
-     <div class="section" id="section2" 
-      style="background-color: #C6DCE3;">
+     <div class="section" id="section3">
        <div class="container">
        <div class="row EditRow" style="padding: 50px 0 50px 0;">
-        <div class="col-12 col-md-6">
-          <u class="choice_difficult2" style="color: #142930;font-size: 40px;">
-                  {{ $t('landingPage.sec5-title') }}
-          </u>
-            <br>
-            <ul style="color: #142930;font-size: 20px;">
-
-               <li>
-                 {{ $t('landingPage.sec5(1)') }}
-               </li>
-               <li>
-                 {{ $t('landingPage.sec5(2)') }}
-               </li>
-               <li>
-                 {{ $t('landingPage.sec5(3)') }}
-               </li>
-               <li>
-                 {{ $t('landingPage.sec5(4)') }}
-               </li>
-               <li>
-                 {{ $t('landingPage.sec5(5)') }}
-               </li>
-               <li>
-                 {{ $t('landingPage.sec5(6)') }}
-               </li>
-               <li>
-                 {{ $t('landingPage.sec5(7)') }}
-               </li>
-            </ul>
+        <div class="col-12 col-md-12">
+          <img
+             src="@/assets/img/Home.png"
+             alt
+           />
          </div>
-         <div class="col-12 col-md-6">
+         <div class="col-12 col-md-12">
            <img
-             style="width: 65%;padding-top: 45px"
-             src="@/assets/img/sec5.png"
+             src="@/assets/img/Home (1).png"
              alt
            />
          </div>
        </div>
        </div>
      </div>
-     <div class="section" id="section2" 
-      style="background-color: #142930;">
+     <div class="section" id="section2">
        <div class="container">
        <div class="row EditRow">
         <div class="col-12 col-md-8">
@@ -246,8 +247,7 @@
        </div>
        </div>
      </div>
-     <div class="section" id="section2" 
-      style="background-color: #C6DCE3;">
+     <div class="section" id="section4">
        <div class="container">
         <div style="text-align: center;">
         <u class="choice_difficult2" style="color: #142930;font-size: 40px;font-weight: 600;">
@@ -288,223 +288,32 @@
        </div>
        </div>
      </div>
-     <div class="section" id="section2" 
-      style="background-color: #142930;">
-       <div class="container">
-        <div style="text-align: center;">
-         <u  style="color: #CCF4E5;font-size: 32px;font-weight: 500;">
-          {{ $t('landingPage.sec8-title') }}
-         </u>
-        </div>
-       <div class="row EditRow">
-        <div class="col-12 col-md-3">
-          <img
-            class="sec9_img_1"
-            style="width: 92%;position: absolute;bottom: -50px;"
-            src="@/assets/img/sec8.png"
-            alt
-          />
-          <img
-            class="sec9_img_2"
-            style="width: 92%"
-            src="@/assets/img/sec8.png"
-            alt
-          />
-        </div>
-        <div class="col-12 col-md-9" style="padding-top: 50px;">
-            <ul style="color: #CCF4E5;font-size: 21px;font-weight: 500;line-height: 2em;">
-              <li>
-                {{ $t('landingPage.sec8(1)') }}
-              </li>
-              <li>
-                {{ $t('landingPage.sec8(2)') }}
-              </li>
-              <li>
-                {{ $t('landingPage.sec8(3)') }}
-              </li>
-              <li>
-                {{ $t('landingPage.sec8(4)') }}
-              </li>
-              <li>
-                {{ $t('landingPage.sec8(5)') }}
-              </li>
-              <li>
-                {{ $t('landingPage.sec8(6)') }}
-              </li>
-            </ul>
-        </div>
-       </div>
-       </div>
-     </div>
-     <div class="section" id="section8" 
-      style="background: #C6DCE3;">
-       <div class="container">
-       <div class="section3 row">
-         <div class="col-12 col-md-12"
-          style="text-align: center;">
-            <p style="color: #142930;font-size: 27px;font-weight: 500;">
-              {{ $t('landingPage.sec9(1)') }}
-            </p>
-            <br>
-            <nuxt-link
-              style="background: #142930;padding: 20px 50px 20px 50px;border-radius: 20px;color: #C6DCE3;"
-              :to="localePath('/check_out')">
-              {{ $t('Subscribe') }}
-            </nuxt-link>
-            <img
-            style="margin: 40px 0;"
-            width="100%"
-            src="@/assets/img/sec9.png"
-            alt
-             />
-             <p style="color: #142930; font-size: 27px;font-weight: 500;">
-               {{ $t('landingPage.sec9(2)') }}
-             </p>
-         </div>
-       </div>
-       </div>
-     </div>
-     <div class="section" id="section2" 
-      style="background-color: #142930;">
-       <div class="container">
-        <div>
-         <p
-          style="color: #CCF4E5;font-size:27px;">
-             {{ $t('landingPage.sec10_description') }}
-         </p>
-        </div>
-       <div class="row EditRow" >
-        <div class="col-12 col-md-9">
-          <ul style="color: #CCF4E5;font-size: 22px;line-height: 3em;">
-            <li>
-              {{ $t('landingPage.sec10(1)') }}
-            </li>
-            <li>
-              {{ $t('landingPage.sec10(2)') }}
-            </li>
-            <li>
-              {{ $t('landingPage.sec10(3)') }}
-            </li>
-            <li>
-              {{ $t('landingPage.sec10(4)') }}
-            </li>
-            <li>
-              {{ $t('landingPage.sec10(5)') }}
-            </li>
-            <li>
-              {{ $t('landingPage.sec10(6)') }}
-            </li>
-            <li>
-              {{ $t('landingPage.sec10(7)') }}
-            </li>
-          </ul>
-        </div>
-        <div class="col-12 col-md-3" style="text-align: center;">
-            <img
-            class="sec10_img"
-            src="@/assets/img/sec10.png"
-            alt
-            />
-            <a href="https://www.overtime.eg/" target="_blank" style="color: #CCF4E5;font-size:27px;">
-              www.overtime.eg
-            </a>
-         </div>
-       </div>
-       </div>
-     </div>
-     <div class="section" id="section2" 
-      style="background-color: #C6DCE3;">
-      <div class="container">
-       <div class="row EditRow" >
-        <div class="col-12 col-md-3" style="text-align: center;">
-          <div style="background:#142930;margin: 0 0 30px 0;padding: 35px 0 35px 0;border-radius: 30px;">
-            <img src="@/assets/img/Missions.svg" alt="">
-              <p class="sec11_p" style="font-size: xx-large;color: #C6DCE3;">
-                {{ $t('landingPage.sec11_mission') }}
-              </p>
-          </div>
-          <div style="background:#142930;padding: 35px 0 35px 0;border-radius: 30px;">
-            <img src="@/assets/img/friend.svg" alt="">
-              <p class="sec11_p" style="font-size: xx-large;color: #C6DCE3;">
-                {{ $t('landingPage.sec11_friend') }}
-              </p>
-          </div>
-        </div>
-        <div class="col-12 col-md-3" style="text-align: center;">
-          <div class="jop" style="background:#142930;margin: 0 0 30px 0;padding: 35px 0 35px 0;border-radius: 30px;">
-            <img src="@/assets/img/job.svg">
-              <p class="sec11_p" style="font-size: xx-large;color: #C6DCE3;">
-                {{ $t('landingPage.sec11_job') }}
-              </p>
-          </div>
-          <div style="background:#142930;padding: 35px 0 35px 0;border-radius: 30px;">
-            <img src="@/assets/img/promoCode.svg" alt="">
-              <p class="sec11_p" style="font-size: xx-large;color: #C6DCE3;">
-                {{ $t('landingPage.sec11_PromoCode') }}
-              </p>
-          </div>
-        </div>
-        <div class="col-12 col-md-3" style="text-align: center;">
-          <div
-          class="jop"
-          style="background:#142930;margin: 0 0 30px 0;padding: 35px 0 35px 0;border-radius: 30px;">
-            <img 
-            src="@/assets/img/Services.svg" alt="">
-              <p class="sec11_p" style="font-size: xx-large;color: #C6DCE3;">
-                {{ $t('landingPage.sec11_services') }}
-              </p>
-          </div>
-          <div style="background:#142930;padding: 35px 0 35px 0;border-radius: 30px;">
-            <img src="@/assets/img/home.svg" alt="">
-              <p class="sec11_p" style="font-size: xx-large;color: #C6DCE3;">
-                {{ $t('landingPage.sec11_prokerage') }}
-              </p>
-          </div>
-        </div>
-        <div class="col-12 col-md-3" style="text-align: center;">
-          <u style="color: #142930;font-size: 45px;">
-            {{ $t('landingPage.sec11_title1') }}
-          </u>
-          <br>
-          <u style="color: #142930;font-size: 45px;">
-            {{ $t('landingPage.sec11_title2') }}
-          </u>
-          <div style="background:#142930;padding: 79px 0 128px 0;margin: 40px 0 0 0;border-radius: 30px;">
-            <img src="@/assets/img/product.svg" alt="">
-              <p class="sec11_p" style="font-size: xx-large;color: #C6DCE3;">
-                {{ $t('landingPage.sec11_products') }}
-              </p>
-          </div>
-        </div>
-       </div>
-       </div>
-     </div>
-     <div class="section" id="section11"
-      style="background-color: #142930;padding-bottom:0;">
-       <div class="container">
-        <p style="font-size: 40px;color: #C6DCE3;text-align: center;">
-          {{ $t('landingPage.sec12-title') }}
-        </p>
-       <div class="row EditRow">
-        <div class="col-12 col-md-6">
-          <p style="font-size: 27px;color: #C6DCE3;">
-            {{ $t('landingPage.sec12-description') }}
-          </p>
-         </div>
-        <div class="col-12 col-md-6">
-          <img
-          class="sec11_image"
-          src="@/assets/img/sec11.svg" alt/>
-         </div>
-       </div>
-       </div>
-     </div>
-  </div>
-  </template>
-  <script>
+    </div>
+</template>
+<script>
+import Swiper from 'swiper';
+import 'swiper/css/swiper.css';
+import axios from "axios";
   export default {
     data() {
     return {
+      swiperOptions: {
+        autoplay: {
+        delay: 1000, // تأخير الانتقال بين الشرائح بالمللي ثانية
+        disableOnInteraction: false, // يتم تعطيل التحويل التلقائي عند التفاعل مع السلايدر
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      slidesPerView: 5,
+      spaceBetween: 20,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        },
+      },
       ar: true,
       fixed: false,
       phoneData: null,
@@ -535,6 +344,62 @@
         ],
       }
     },
+  mounted() {
+    this.$nextTick(() => {
+    this.swiper = new Swiper('.swiper-container', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+    });
+  },
+  created() {
+  this.getVendors();
+  },
+  methods:{
+    async getVendors() {
+      try {
+        this.loading = true;
+        const response = await axios.get(`https://admin.overtime.marketing/api/seller/vendors`);
+        this.loading = false;
+        this.vendors = response?.data?.vendors ?? {};
+      } catch (error) {
+        this.loading = false;
+        if (!error.response) {
+          this.$notify({
+            group: "foo",
+            text: "No internet access",
+            type: "error",
+          });
+        } else if (error.response.status == 400) {
+          this.$notify({
+            group: "foo",
+            text: error.response.data.message,
+            type: "error",
+          });
+        } else if (error.response.status == 401) {
+          if (await this.$refresh()) {
+            this.getOrder();
+          }
+        } else if (error.response.status == 404) {
+          this.$notify({
+            group: "foo",
+            text: error.response.data.message,
+            type: "error",
+          });
+          this.$router.go(-1);
+        } else {
+          this.$notify({
+            group: "foo",
+            text: error.response.statusText,
+            type: "error",
+          });
+        }
+      }
+    },
+  },
   watch: {
       sent(newVal, oldVal) {
         if (newVal === true)
@@ -544,9 +409,29 @@
       },
     },
   }
-  </script>
+</script>
   
   <style lang="scss" scoped>
+  #section1{
+  background: url("@/assets/img/Home (1).svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+#section2{
+  background: url("@/assets/img/About.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+#section3{
+  background: url("@/assets/img/over time marketing LLC websitehla.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+#section4{
+  background: url("@/assets/img/over time marketing LLC websitehla (1).svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
   .video{
     width: 550px;
     padding-top: 20px;
@@ -557,9 +442,6 @@
   .sec10_img{
     width: 140%;
   }
-  .section{
-    padding: 50px 0 50px 0;
-  }
   #app.rtl{
   .sec6_image{
     width: 100%;
@@ -567,8 +449,7 @@
     margin-right: -165px;
   }
   .img_sec1{
-    width: 150%;
-    margin-right: -150px;
+    width: 100%;
   }
   .sec11_image{
     position: relative;
